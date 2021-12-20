@@ -1,3 +1,3 @@
 # Angular9-Essencial
 
-Parei em componente cabeçalho, assistir o próximo.
+Parei elementos do angular 2, assistir de novo esse.
