@@ -1,3 +1,19 @@
 .full-width-table {
   width: 100%;
 }
+
+table{
+  width: 100%;
+}
+
+.edit > i{
+  color: #265fd9
+}
+
+.delete > i{
+  color: #e91010d5
+}
+
+.edit{
+  margin-right: 10px;
+}

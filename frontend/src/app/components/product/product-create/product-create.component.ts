@@ -10,11 +10,12 @@ import { ProductService } from '../product.service';
 })
 export class ProductCreateComponent implements OnInit {
 
-product: Product = {
-  name: '',
-  price: undefined
-  
-}
+  product: Product = {
+    id: 0,
+    name: '',
+    price: 0
+
+  }
 
   constructor(
     private productService: ProductService,
@@ -22,16 +23,17 @@ product: Product = {
   ) { }
 
   ngOnInit(): void {
-    
+
   }
 
   createProdutc(): void {
-  
+
     this.productService.create(this.product).subscribe(() => {
       this.productService.showMessage('Operação executada com sucesso!');
+      this.router.navigate(['/products']);
     })
   }
-  
+
   cancel(): void {
     this.router.navigate(['/products'])
   }

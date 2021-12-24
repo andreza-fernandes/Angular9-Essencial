@@ -13,7 +13,7 @@
     {
       "id": 3,
       "name": "Caneta BIC Vermelha",
-      "price": 3.8
+      "price": "10.90"
     },
     {
       "id": 4,
@@ -39,6 +39,11 @@
       "name": "Geladeira",
       "price": "1844.90",
       "id": 8
+    },
+    {
+      "id": 9,
+      "name": "Produto pro João ver edit",
+      "price": "200.60"
     }
   ]
 }

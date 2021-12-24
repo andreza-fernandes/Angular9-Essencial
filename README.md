@@ -1,6 +1,5 @@
 # Angular9-Essencial
 
-Parei entendendo componente gerado, assistir proximo.
 
 
 

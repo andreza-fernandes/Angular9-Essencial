@@ -3,6 +3,7 @@ import { MatPaginator } from '@angular/material/paginator';
 import { MatSort } from '@angular/material/sort';
 import { map } from 'rxjs/operators';
 import { Observable, of as observableOf, merge } from 'rxjs';
+import { Product } from '../product.model';
 
 // TODO: Replace this with your own data model type
 export interface ProductReadTesteItem {
@@ -39,8 +40,8 @@ const EXAMPLE_DATA: ProductReadTesteItem[] = [
  * encapsulate all logic for fetching and manipulating the displayed data
  * (including sorting, pagination, and filtering).
  */
-export class ProductReadTesteDataSource extends DataSource<ProductReadTesteItem> {
-  data: ProductReadTesteItem[] = EXAMPLE_DATA;
+export class ProductReadTesteDataSource extends DataSource<Product> {
+  data: Product[] = [];
   paginator: MatPaginator | undefined;
   sort: MatSort | undefined;
 
@@ -53,7 +54,7 @@ export class ProductReadTesteDataSource extends DataSource<ProductReadTesteItem>
    * the returned stream emits new items.
    * @returns A stream of the items to be rendered.
    */
-  connect(): Observable<ProductReadTesteItem[]> {
+  connect(): Observable<Product[]> {
     if (this.paginator && this.sort) {
       // Combine everything that affects the rendered data into one update
       // stream for the data-table to consume.
@@ -76,7 +77,7 @@ export class ProductReadTesteDataSource extends DataSource<ProductReadTesteItem>
    * Paginate the data (client-side). If you're using server-side pagination,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getPagedData(data: ProductReadTesteItem[]): ProductReadTesteItem[] {
+  private getPagedData(data: Product[]): Product[] {
     if (this.paginator) {
       const startIndex = this.paginator.pageIndex * this.paginator.pageSize;
       return data.splice(startIndex, this.paginator.pageSize);
@@ -89,7 +90,7 @@ export class ProductReadTesteDataSource extends DataSource<ProductReadTesteItem>
    * Sort the data (client-side). If you're using server-side sorting,
    * this would be replaced by requesting the appropriate data from the server.
    */
-  private getSortedData(data: ProductReadTesteItem[]): ProductReadTesteItem[] {
+  private getSortedData(data: Product[]): Product[] {
     if (!this.sort || !this.sort.active || this.sort.direction === '') {
       return data;
     }
@@ -99,6 +100,7 @@ export class ProductReadTesteDataSource extends DataSource<ProductReadTesteItem>
       switch (this.sort?.active) {
         case 'name': return compare(a.name, b.name, isAsc);
         case 'id': return compare(+a.id, +b.id, isAsc);
+        case 'price': return compare(+a.price, +b.price, isAsc);
         default: return 0;
       }
     });

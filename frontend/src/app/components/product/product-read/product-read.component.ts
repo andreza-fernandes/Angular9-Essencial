@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
+import { MatSort } from '@angular/material/sort';
 import { Product } from '../product.model';
 import { ProductService } from '../product.service';
 
@@ -9,7 +10,9 @@ import { ProductService } from '../product.service';
 })
 export class ProductReadComponent implements OnInit {
 
+  @ViewChild(MatSort) sort!: MatSort;
   products: Product[] = [];
+  displayedColumns = ['id', 'name', 'price']
 
   constructor(private productService: ProductService) { }
 
