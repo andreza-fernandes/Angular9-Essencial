@@ -9,12 +9,12 @@ Parei entendendo componente gerado, assistir proximo.
 npm install
 ```
 
-### Run server back-end /backend
+### Run server back-end path /backend
 ```
 npm start
 ```
 
-### Run front-end /frontend 
+### Run front-end path /frontend 
 ```
 ng serve --open
 ```
