@@ -1,3 +1,22 @@
 # Angular9-Essencial
 
-Parei componente obter produto, assistir proximo.
+Parei entendendo componente gerado, assistir proximo.
+
+
+
+## Project setup
+```
+npm install
+```
+
+### Run server back-end /backend
+```
+npm start
+```
+
+### Run front-end /frontend 
+```
+ng serve --open
+```
+
+
