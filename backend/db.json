@@ -1,24 +1,44 @@
 {
-    "products":[
-        {
-            "id": 1,
-            "name": "Caneta BIC Preta",
-            "price": 5.80
-        },
-        {
-            "id": 2,
-            "name": "Caneta BIC Azul",
-            "price": 9.80
-        },
-        {
-            "id": 3,
-            "name": "Caneta BIC Vermelha",
-            "price": 3.80
-        },
-        {
-            "id": 4,
-            "name": "Caneta BIC Roxa",
-            "price": 4.80
-        }
-]
+  "products": [
+    {
+      "id": 1,
+      "name": "Caneta BIC Preta",
+      "price": 5.8
+    },
+    {
+      "id": 2,
+      "name": "Caneta BIC Azul",
+      "price": 9.8
+    },
+    {
+      "id": 3,
+      "name": "Caneta BIC Vermelha",
+      "price": 3.8
+    },
+    {
+      "id": 4,
+      "name": "Caneta BIC Roxa",
+      "price": 4.8
+    },
+    {
+      "name": "Produto teste",
+      "price": 125.9,
+      "id": 5
+    },
+    {
+      "name": "Produto teste",
+      "price": 125.9,
+      "id": 6
+    },
+    {
+      "name": "Veio do formulario",
+      "price": "9.99",
+      "id": 7
+    },
+    {
+      "name": "Geladeira",
+      "price": "1844.90",
+      "id": 8
+    }
+  ]
 }
